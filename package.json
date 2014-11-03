@@ -1,0 +1,28 @@
+{
+  "name": "draw",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "cd tests && ../node_modules/karma/bin/karma start --single-run --browsers PhantomJS"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/pointvirgule/draw.git"
+  },
+  "author": "Simon Boisseau",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pointvirgule/draw/issues"
+  },
+  "homepage": "https://github.com/pointvirgule/draw",
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-contrib-jshint": "^0.10.0",
+    "grunt-contrib-less": "^0.12.0",
+    "grunt-contrib-watch": "^0.6.1",
+    "karma": "^0.12.24",
+    "karma-jasmine": "^0.1.5",
+    "karma-phantomjs-launcher": "^0.1.4"
+  }
+}

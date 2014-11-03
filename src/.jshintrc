@@ -1,0 +1,6 @@
+{
+	"browser": true,
+	"indent": 2,
+	"globalstrict": true,
+	"devel" : true
+}
