@@ -1,11 +1,29 @@
-@draggable_min_height: 25px;
-@draggable_min_width: 50px;
+@draggable_min_height: 10px;
+@draggable_min_width: 10px;
 
 .draggable {
 
 	position: absolute !important;
 	min-height: @draggable_min_height;
 	min-width: @draggable_min_width;
+
+	.radius-controller {
+
+		display: none;
+		position: absolute;
+		right: 0;
+		height: 10px;
+		z-index: 3;
+		top: 0;
+		.translate3d(0, -50%);
+
+	}
+
+	&.selected {
+
+		> .radius-controller { display: block; }
+
+	}
 
 }
 

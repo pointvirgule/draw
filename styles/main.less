@@ -1,5 +1,8 @@
 @import (less) "slider";
+@import (less) "selectable";
 @import (less) "draggable";
+
+@slider_color: transparent;
 
 body {
 
@@ -23,23 +26,8 @@ body {
 	position: relative;
 	height: 500px;
 	width: 500px;
-	margin: 0 auto;
+	margin: 15px auto;
 	background: #EEE;
-
-}
-
-#color-picker {
-
-	position: absolute;
-	width: 100%;
-	bottom: 0;
-	//.translate3d(@x: 0, @y: -50%, @z: 0);
-
-	.wrapper {
-
-		padding: 15px;
-
-	}
 
 }
 
@@ -54,13 +42,7 @@ body {
 #child-rect {
 
 	background: #333;
-
-}
-
-#free-rect {
-
-	width: 100px;
-	height: 120px;
-	background: #666;
+	width: 125px;
+	height: 75px;
 
 }

@@ -150,6 +150,8 @@
 
 			this.setPercentage( ( moveX - bounds.left ) / bounds.width );
 
+			e.stopPropagation();
+
 		},
 
 		onRelease: function (e) {

@@ -16,7 +16,10 @@ module.exports = function(config) {
 
     // list of files / patterns to load in the browser
     files: [
-        'src/**/*.js',
+        "src/polyfills.js",
+        "src/selectable.js",
+        "src/slider.js",
+        "src/draggable.js",
         'tests/**/*.js'
     ],
 
