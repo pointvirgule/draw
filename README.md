@@ -1,6 +1,55 @@
 # Draw [![Build Status](https://travis-ci.org/pointvirgule/draw.png?branch=master)](https://travis-ci.org/pointvirgule/draw)
 
+# Draggable Object
 
+## Constructor
+
+To make an `DOMElement` draggable, you can call the `DraggableObject` constructor.
+
+```js
+
+new DraggableObject( document.getElementById( 'my-draggable-object' ) );
+
+```
+A `draggable` class will automatically be set on the specified element.
+
+## Behaviour
+
+You will be able to drag around your object. You need to take care about how you position your object in the dom. You can set boundaries the dragging object by setting a `container` class to one of its parents. 
+
+```html
+
+<div class="container">
+
+	<div id="my-draggable-object">
+
+</div>
+
+```
+
+It doesn't need to be its direct parent but keep in mind that the draggable object is positionned in an absolute manner, so don't put  `relative` positionned object nested between your `draggable and your `container`.
+
+## Nested draggable objects
+
+You can create nested draggable objects, remember that the boundaries will be set by the closest `container` parent.
+
+```html
+
+<div id="my-top-container" class="container">
+
+	<div id="my-draggable-object">
+
+		<div id="my-child-container" class="container">
+
+			<div id="my-child-draggable-object"></div>			
+
+		</div>
+
+	</div>
+
+</div>
+
+```
 
 # Slider
 

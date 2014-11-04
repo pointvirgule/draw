@@ -21,7 +21,7 @@
 		this._callback = null;
 		this.inflate();
 
-		this.attachEventListeners();		
+		this.attachEventListeners();
 
 	};
 
