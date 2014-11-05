@@ -84,11 +84,11 @@
 			*/
 			if ( this.selected )
 			{
-				this.element.classList.add( 'selected' ) :
+				this.element.classList.add( 'selected' );
 			}
 			else 
 			{
-				this.element.classList.remove( 'selected' ) );
+				this.element.classList.remove( 'selected' );
 			}
 			this.renderId = null;
 
