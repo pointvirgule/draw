@@ -77,7 +77,9 @@
 
 		renderSelection: function() {
 
-			this.element.classList.toggle( 'selected', this.selected );
+			var test = ( this.selected ? 
+			this.element.classList.add( 'selected' ) :
+			this.element.classList.remove( 'selected' ) );
 			this.renderId = null;
 
 		}
