@@ -8,7 +8,7 @@ To make an `DOMElement` draggable, you can call the `DraggableObject` constructo
 
 ```js
 
-new DraggableObject( document.getElementById( 'my-draggable-object' ) );
+new DraggableObject( document.getElementById( 'my-draggable-object' ), false );
 
 ```
 A `draggable` class will automatically be set on the specified element.
@@ -50,6 +50,17 @@ You can create nested draggable objects, remember that the boundaries will be se
 </div>
 
 ```
+
+## Tweakable
+
+The `DraggableObject` contructor takes an extra `boolean` parameter. Setting this parameter to `true` will add a slider to the object when selected. This slider enables the user to adjust the `border-radius` of the object.
+
+```js
+
+new DraggableObject( document.getElementById( 'my-draggable-object' ), true );
+
+```
+
 
 # Slider
 
