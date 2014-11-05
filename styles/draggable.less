@@ -1,6 +1,10 @@
 @draggable_min_height: 10px;
 @draggable_min_width: 10px;
 
+@draggable-selected-border-color : #14C7C7;
+@draggable-selected-border-width : 3px;
+
+
 .draggable {
 
 	position: absolute !important;
@@ -21,6 +25,18 @@
 	}
 
 	&.selected {
+
+		&:before {
+
+			content:"";
+			position: absolute;
+			width: calc(~"100% -" @draggable-selected-border-width * 2);
+			height: calc(~"100% -" @draggable-selected-border-width * 2);
+			border: solid @draggable-selected-border-width @draggable-selected-border-color;
+			border-radius: inherit;
+			-moz-border-radius: inherit;
+			-webkit-border-radius: inherit;
+		}
 
 		> .radius-controller { display: block; }
 
