@@ -61,6 +61,65 @@ new DraggableObject( document.getElementById( 'my-draggable-object' ), true );
 
 ```
 
+## Style
+
+You can change the appearance of your draggable object by tweaking some variables defined in the `styles/draggable.less`.
+
+Just import the stylesheet and override some variables. Please not that the `draggable.less` requires `slider.less` to be in the same directory.
+
+```less
+
+@import (less) 'draggable.less';
+
+@draggable_min_height: 10px;
+@draggable_min_width: 10px;
+
+@draggable-selected-border-color : #14C7C7;
+@draggable-selected-border-width : 3px;
+
+
+```
+
+# Selectable object
+
+The `DraggableObject` instances inherit from the behaviour of `SelectableObject`. The selectable objects watches user interaction with a given `DOMElement`, toggling a `selected` class, so you can style your element.
+
+## Constructor
+
+```js
+new SelectableObject( document.getElementById( 'my-selectable-element' ) );
+```
+
+## Behaviour
+
+If a selectable object is clicked or touched, it will receive the `selected` class, and will dispatch a `select` event. The selectable objects also listen to this event at the `document`, this enable them to unselect themselves automatically when another selectable object is selected. Therefore only, one element can be `selected` at the same time on the document.
+
+
+## Listen to selection
+
+You watch the selection by listening to the `select` event
+
+```js
+
+/*
+*	Make sure to listen for the event during the capture 
+*	phase as the event bubbling is stopped by its source element.
+*/
+window.addEventListener( 'select', function (e) {
+	
+	/*
+	*	Get the selected element checking the 
+	*	source of the event.
+	*/
+	var selectedEl = e.srcElement || e.originalTarget;
+
+}, true );
+
+```
+
+## Style
+
+Adjust your style by adding rules to the `selected` class that is applied to the selected objects.
 
 # Slider
 
