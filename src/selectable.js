@@ -77,9 +77,19 @@
 
 		renderSelection: function() {
 
-			var test = ( this.selected ? 
-			this.element.classList.add( 'selected' ) :
-			this.element.classList.remove( 'selected' ) );
+			/*
+			*	IE doesn't support an extra the force parameter
+			*	on the classList.toggle method so we need to test our
+			*	state before taking action
+			*/
+			if ( this.selected )
+			{
+				this.element.classList.add( 'selected' ) :
+			}
+			else 
+			{
+				this.element.classList.remove( 'selected' ) );
+			}
 			this.renderId = null;
 
 		}
